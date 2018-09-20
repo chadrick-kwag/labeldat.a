@@ -1,0 +1,34 @@
+{% extends "base_site.html" %} {%block title%}Workbench{%endblock%} {% block content %}
+<script type="text/javascript">
+var passed_on_dsid = {{ds_id}}
+</script>
+<div class="right_col" role="main">
+    <div id="status_bar">
+        <div class="customsetting">
+            <h1 id="dsinfo"></h1>
+        </div>
+        <div class="workbench_stats">
+            <label class="index_label" id="image_index"></label>
+            <button id="savebutton" style="float:right;" value="save">save('u')</button>
+        </div>
+    </div>
+    <div class="workbench_img_holder">
+        <div id="canvas_wrapper" style="position:relative; display:block;">
+            <canvas id="canvas0" style="position: absolute; left:0;top:0;z-index=0;"></canvas>
+            <canvas id="canvas1" style="position: absolute; left:0;top:0;z-index=1;"></canvas>
+            <canvas id="canvas2" style="position: absolute;left:0;top:0;z-index=2;"></canvas>
+            <select id="labeldropdown" style="position: absolute;display:none;">
+                {%for label in labellist%}
+                    <option value="{{label}}">{{label}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <!-- <img src="testbackground.jpg" id="bgimage" style="display:none;"/> -->
+    <!-- <img src="http://13.124.175.119:4001/web/1/img/3" id="bgimage" style="display:none;"/> -->
+    <img id="bgimage" style="display:none;" />
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% load static %}
+<script src="{% static 'js/workbench.js' %}"></script>
+{% endblock %}

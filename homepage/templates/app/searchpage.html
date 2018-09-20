@@ -1,0 +1,60 @@
+{% extends "base_site.html" %} {%block title%}Search{%endblock%} {% block content %} {%load static%}
+<link href="{% static 'css/searchpage.css' %}" rel="stylesheet">
+<div class="right_col" role="main">
+
+    <div class="searchdiv center">
+        <form method="get">
+            <input class="searchinput" name="searchinput" type="text " placeholder="Search.. ">
+        </form>
+        
+    </div>
+            <div class="searchshow ">
+
+                {%if show_ds_set%}
+                
+                {%for ds in show_ds_set%}
+                <div class="row dsitem " onclick="location.href='{%url 'dsinfopage' ds.dsid %}' ">
+                    <div class="rowcontents ">
+                        
+                        <div class="col-sm-2 " >
+                            
+                                <div class="dsimg ">
+                                    {%load static%}
+
+                                    <div class="imgplacer " style="background-image: url({% static ds.thumbnail_filename.url%}); ">
+
+                                    </div> 
+                                </div>
+                                    
+                            
+
+                        </div>  
+                        <div class="col-sm-10 ">
+                            <p class="result-title ">{{ ds.title }}</p>
+                            <p class="result-desc ">{{ds.description}}</p>
+                        </div>  
+                    </div>
+                </div>
+                <div class="result-seperator "><p></p></div>
+                {%endfor%}
+                
+            
+                
+                {%else%}
+                <p>no search results</p>
+                {%endif%}
+        
+            </div>
+    
+    
+    
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN
+            " crossorigin="anonymous "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q
+            " crossorigin="anonymous "></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js " integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4
+            " crossorigin="anonymous "></script>
+
+<!-- <script src="{% static 'js/workbench.js' %} "></script> -->
+{% endblock %}

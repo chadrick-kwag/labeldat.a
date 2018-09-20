@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LabelDat.A?</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap -->
+    {%load static%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/prettyPhoto.css' %}">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+    <!-- <script type="text/javascript" src="{% static 'js/modernizr.custom.js' %}"></script> -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <div id="preloader">
+        <div id="status">
+            <img src="{% static 'img/preloader.gif'%}" height="64" width="64" alt=""> </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"> LabelDat.A</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Header -->
+    <div id="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <h1>Welcome to
+                            <span class="brand-heading">LabelDat.A?</span>
+                        </h1>
+                        <p class="intro-text">Won't you label some data for us, eh? Get paid doing so.</p>
+                        <a href="{% url 'login'%}" class="btn btn-default page-scroll">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="section-title text-center center">
+                <h2>About this Service</h2>
+                <hr>
+            </div>
+            <div class="emphasis text-center center">
+                <p>Pure Image + Spare Time = Gold!("Labeled" Data)</p>
+
+            </div>
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="about-text">
+                        <h4>For Dataset Providers</h4>
+                        <p>You have raw data. A whole lot of it. But what's the use if it is not yet labeled? You need manpower
+                            and efficient tools to label those potentially gold-striking data. Let us help you outsource
+                            that cumbersome process.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="{% static 'img/connected.jpg'%}" class="img-responsive">
+                </div>
+                <div class="col-md-4">
+                    <div class="about-text">
+                        <h4>For ordinary people("minions")</h4>
+                        <p>Want to earn some pocket money? Or do you have the skill to label some data that requires professional
+                            background to understand? Register here and get paid for your knowledge and manpower.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services Section -->
+    <div id="services" class="text-center">
+        <div class="container">
+            <div class="section-title center">
+                <h2>Our Strengths</h2>
+                <hr>
+            </div>
+            <div class="space"></div>
+            <div class="row">
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="service">
+                        <i class="fa fa-desktop"></i>
+                        <h3>Dataset Permission Control</h3>
+                        <p>control over opening data labeling to public or selected private users</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="service">
+                        <i class="fa fa-cogs"></i>
+                        <h3>Efficient Labeling Tools</h3>
+                        <p>Provide labeling interface that maximizes minion's productivity. No need to invent your own labeling
+                            tools</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="service">
+                        <i class="fa fa-tablet"></i>
+                        <h3>Label Evaluation</h3>
+                        <p>Process through our own developed label evaluation algorithm to reduce label errors</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="space"></div>
+            <div class="row">
+                <div class="col-md-3">
+                    
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="service">
+                        <i class="fa fa-html5"></i>
+                        <h3>UI friendly labeling tools</h3>
+                        <p>Provides user friendly interface and efficient hotkeys</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="service">
+                        <i class="fa fa-wordpress"></i>
+                        <h3>Monetize Manpower</h3>
+                        <p>Accumulate and monetize your efforts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div id="team" class="text-center">
+        <div class="container">
+            <div class="section-title center">
+                <h2>TEAM</h2>
+                <hr>
+                <p>Meet the minion that started this service.</p>
+            </div>
+            <div id="row">
+                <!-- <div class="col-xs-1 col-md-1 col-sm-1"> -->
+                <div class="col">
+                    <div class="thumbnail">
+                        <img src="{% static 'img/team/cropped.jpg'%}" alt="..." class="img-thumbnail team-img">
+                        <div class="caption">
+                            <h3>Chadrick Kwag</h3>
+                            <p>Founder / Maintainer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonials Section -->
+    <!-- Contact Section -->
+    <div id="contact" class="text-center">
+        <div class="container">
+            <div class="section-title center">
+                <h2>Pricing & Contact</h2>
+                <hr>
+                <p>If you are a dataset provider and interested in using this service, then please contact us for details on pricing
+                    and procedures on how to register your datasets.</p>
+            </div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="contact-item">
+                            <i class="fa fa-map-marker fa-2x"></i>
+                            <p>GangNam-Gu Seoul,
+                                <br> Republic of Korea</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="contact-item">
+                            <i class="fa fa-envelope-o fa-2x"></i>
+                            <p>chadrick.kwag@gmail.com</p>
+                        </div>
+                    </div>
+                    <!-- <div class="clearfix"></div> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <p>Copyright &copy; Modus. Designed by
+                <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a>
+            </p>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="{% static 'js/jquery.1.11.1.js' %}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="{% static 'js/bootstrap.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/SmoothScroll.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.prettyPhoto.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.isotope.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.parallax.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/jqBootstrapValidation.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/contact_me.js'%}"></script>
+    <!-- Javascripts
+    ================================================== -->
+    <script type="text/javascript" src="{% static 'js/main.js'%}"></script>
+</body>
+
+</html>

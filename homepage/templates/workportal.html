@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>work portal</h1>
+<p>welcome {{user.get_username}} </p>
+<p>available datasets</p>
+{% for dataset in datasets %}
+<a href={% url 'dssummary' dataset.dsid %}><li>{{dataset.title}}</li></a>
+{% endfor %}
+
+
+
+{% endblock %}

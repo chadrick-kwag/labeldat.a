@@ -1,0 +1,103 @@
+{% extends "base_generic.html" %} 
+
+{% block title %}
+<meta charset="UTF-8">
+<title>Login</title>
+<link href="/static/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+{%load static%}
+<link rel="stylesheet" href="{% static 'login2/css/login.css'%}"> {%endblock%}
+
+{% block content %} 
+
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %} {% if next %} {% if user.is_authenticated %}
+<p>Your account doesn't have access to this page. To proceed, please login with an account that has access.</p>
+{% else %}
+<p>Please login to see this page.</p>
+{% endif %} 
+{% endif %}
+
+<!-- <form method="post" action="{% url 'login' %}">
+{% csrf_token %} 
+ -->
+<!-- <div>
+  <td>{{ form.username.label_tag }}</td>
+  <td>{{ form.username }}</td>
+</div>
+<div>
+  <td>{{ form.password.label_tag }}</td>
+  <td>{{ form.password }}</td>
+</div>
+
+<div>
+  <input type="submit" value="login" />
+  <input type="hidden" name="next" value="{{ next }}" />
+</div>
+</form> -->
+
+
+<div class="login-page">
+  <div class="row rowcheck align-middle">
+
+    <div class="col-sm-6 guest-area">
+
+      <div class="guest-contents">
+          <p class="guest-exp">If you wish to take a peek in to our website, please enter as a guest.</p>
+
+          <div class="button-wrapper">
+              <button class="guest-button" onclick="location.href='{%url 'loginguest' %}'">Enter as Guest</button>
+          </div> 
+
+      </div>
+      
+      
+
+    </div>
+    <div class="col-sm-6 guest-area">
+
+        <div class="form">
+            <form class="register-form">
+              {% csrf_token %}
+              <input type="text" placeholder="name" />
+              <input type="password" placeholder="password" />
+              <input type="text" placeholder="email address" />
+              <button>create</button>
+              <p class="message">Already registered?
+                <a href="#">Sign In</a>
+              </p>
+            </form>
+            <form class="login-form" method="post" action="{% url 'login' %}">
+              {% csrf_token %}
+        
+        
+              <input type="text" name="username" placeholder="username" maxlength="256" />
+        
+              <!-- <input type="text" name={{form.username}} placeholder="username"/> -->
+              <!-- <input type="password" placeholder="password" /> -->
+              <!-- {{ form.password }} -->
+              <input type="password" name="password" placeholder="password" />
+        
+              <button type="submit" value="login">login</button>
+              <p class="message">Not registered?
+                <a href="#">Create an account</a>
+              </p>
+            </form>
+          </div>
+
+
+    </div>
+
+
+  </div>
+
+  
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{% static 'login2/js/login.js'%}"></script>
+
+
+{% endblock %}

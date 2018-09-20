@@ -1,0 +1,8 @@
+from django.contrib import admin
+from .models import *
+
+# Register your models here.
+
+admin.site.register(Dataset)
+admin.site.register(save_progress)
+admin.site.register(recent_activity)

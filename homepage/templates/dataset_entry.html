@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>{{ds_title}}</h1>
+
+<p>{{ds_desc}}</p>
+
+<div>
+	<a href={% url 'workbench' ds_id %}><button>start labeling</button></a>
+</div>
+
+
+{% endblock %}
